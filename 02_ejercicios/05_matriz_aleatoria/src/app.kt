@@ -1,3 +1,4 @@
+import java.util.*
 import javax.swing.JOptionPane
 
 /**
@@ -15,13 +16,27 @@ Muestra el array eliminando los valores repetidos.*/
 fun main(args: Array<String>) {
     val f = JOptionPane.showInputDialog("Introduce las filas").toInt()
     val c = JOptionPane.showInputDialog("Introduce las columnas").toInt()
-    var matriz :Array<Array<Int>>
+    var matriz :Array<IntArray> =  Array(f) { IntArray(c) }
+    val r = Random()
 
-    for (i in 1..c){
-        for (j in 1..f){
-            /*val even: IntArray = intArrayOf(2, 4, 6)
-            val odd: IntArray = intArrayOf(1, 3, 5)
-            val lala: Array<IntArray> = arrayOf(even, odd)*/
+    for (i in 0..f-1){
+        for (j in 0..c-1){
+            matriz[i][j]= r.nextInt()
         }
+    }
+
+    println("MATRIZ")
+    for (i in matriz){
+        for (j in matriz[i.size]){  //mal
+            print("$j  ")
+        }
+        println()
+    }
+
+    println("MATRIZ SIN REPETICIONES")
+    val setMatriz = hashSetOf(matriz)
+
+    for (item in setMatriz){
+        println(item)
     }
 }
