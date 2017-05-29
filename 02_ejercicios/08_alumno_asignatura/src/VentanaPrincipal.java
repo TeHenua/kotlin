@@ -16,34 +16,58 @@ public class VentanaPrincipal {
     private JPanel panel;
 
     public VentanaPrincipal() {
+
+        VentanaPrincipal vp = this;
+
         nuevoAlumnoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JFrame("NuevoAlumno");
+                frame.setContentPane(new NuevoAlumno().getPanel());
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
 
             }
         });
         nuevaAsignaturaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JFrame frame = new JFrame("NuevaAsignatura");
+                frame.setContentPane(new NuevaAsignatura().getPanel());
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
         matricularAlumnoEnAsignaturaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JFrame frame = new JFrame("Matricular");
+                frame.setContentPane(new Matricular(vp).getPanel());
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
         listadoDeAlumnosPorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JFrame frame = new JFrame("ListadoAlumnos");
+                frame.setContentPane(new ListadoAlumnos().getPanel());
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
         listadoDeAsignaturasPorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JFrame frame = new JFrame("ListadoAsignaturas");
+                frame.setContentPane(new ListadoAsignaturas().getPanel());
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
         salirButton.addActionListener(new ActionListener() {

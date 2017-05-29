@@ -15,19 +15,8 @@ fun main(args: Array<String>) {
     frame.pack()
     frame.isVisible = true
 
-    var conexion: Connection? = null
 
-    try {
-        val controlador = "org.sqlite.JDBC"
-        val cadenaconex = "jdbc:sqlite:escuela.sqlite"
-
-        Class.forName(controlador)
-        conexion = DriverManager.getConnection(cadenaconex)
-    } catch (ex: ClassNotFoundException) {
-        println("No se ha podido cargar el driver JDBC")
-    } catch (ex: SQLException) {
-        println("Error de conexión")
-    }
 
 
 }
+

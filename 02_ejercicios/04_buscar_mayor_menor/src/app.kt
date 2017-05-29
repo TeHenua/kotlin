@@ -19,8 +19,11 @@ Investiga a ver si en Kotlin hay métodos predefinidos que nos ayuden con estas 
 
 fun main(args: Array<String>) {
     val r = Random()
-    val numeros = arrayOf(r.nextInt(),r.nextInt(),r.nextInt(),r.nextInt(),r.nextInt(),r.nextInt(),r.nextInt(),
+
+/*    val numeros = arrayOf(r.nextInt(),r.nextInt(),r.nextInt(),r.nextInt(),r.nextInt(),r.nextInt(),r.nextInt(),
             r.nextInt(),r.nextInt(),r.nextInt())
+*/
+    val numeros = Array<Int>(10) { r.nextInt() }
 
     fun visualizar(){
         for (n in numeros){
